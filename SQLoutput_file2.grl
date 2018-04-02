@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<grl-catalog catalog-name="URNspec" description="" author="tlt">
+
+    <element-def>
+        <intentional-element id="110" name="Par1, Transfers subject to appropriate safeguards" description="" type="Goal" decompositiontype="Or"/>
+	<intentional-element id="111" name="provide appropriate safeguards" description="" type="Task" decompositiontype="Or"/>
+	<intentional-element id="112" name="provide app safeguard" description="" type="Task" decompositiontype="Or"/>
+	<intentional-element id="113" name="Par4, consistency mechanism " description="" type="Goal" decompositiontype="Or"/>
+	
+	<intentional-element id="1" name="a decision pursuant is NOT absent" description="" type="Task" decompositiontype=""/>
+	<intentional-element id="2" name="Not transfer personal data" description="" type="Task" decompositiontype=""/><intentional-element id="4" name="there is enforceable DS rights and effective legal remedies" description="" type="Task" decompositiontype="Xor"/><intentional-element id="5" name="No authorization from a supervisory authority " description="" type="Task" decompositiontype="And"/><intentional-element id="6" name="there is a legally binding instrument between bodies " description="" type="Task" decompositiontype=""/><intentional-element id="7" name="there is binding corporate rules " description="" type="Task" decompositiontype=""/><intentional-element id="8" name="there is standard data protection clauses adopted by authority" description="" type="Task" decompositiontype=""/><intentional-element id="9" name="a code of conduct with commitments of the DC in the third country to apply safeguards, including as regards DS rights " description="" type="Task" decompositiontype=""/>
+	<intentional-element id="10" name="a certification mechanism with commitments of DC in 3rd country to apply safeguard" description="" type="Task" decompositiontype=""/><intentional-element id="11" name="there is authonization from supervisory authority" description="" type="Task" decompositiontype="And"/><intentional-element id="13" name="contract between DC or processor, and recipient in the third country " description="" type="Task" decompositiontype=""/><intentional-element id="14" name="provisions for authorities for enforceable and effective DS rights" description="" type="Task" decompositiontype=""/><intentional-element id="15" name="supervisory authority apply the consistency mechanism" description="" type="Task" decompositiontype="And"/>
+    </element-def>
+
+    <link-def>
+	<decomposition name="Connection1" description="" srcid="1" destid="110"/>
+	<decomposition name="Connection2" description="" srcid="2" destid="110"/><decomposition name="Connection3" description="" srcid="4" destid="110"/><decomposition name="Connection4" description="" srcid="5" destid="4"/><decomposition name="Connection5" description="" srcid="111" destid="5"/><decomposition name="Connection6" description="" srcid="6" destid="111"/><decomposition name="Connection7" description="" srcid="7" destid="111"/><decomposition name="Connection8" description="" srcid="8" destid="111"/><decomposition name="Connection9" description="" srcid="9" destid="111"/><decomposition name="Connection10" description="" srcid="10" destid="111"/><decomposition name="Connection11" description="" srcid="13" destid="112"/><decomposition name="Connection12" description="" srcid="14" destid="112"/><decomposition name="Connection13" description="" srcid="112" destid="11"/><decomposition name="Connection14" description="" srcid="5" destid="113"/>
+	<decomposition name="Connection15" description="" srcid="15" destid="113"/>
+	<decomposition name="Connection16" description="" srcid="11" destid="15"/>        
+	<decomposition name="Connection17" description="" srcid="11" destid="4"/>
+ </link-def>
+
+    <actor-def>
+        <actor id="1002" name="data controller" description=""/>
+	<actor id="1003" name="data subject" description=""/>
+	<actor id="1004" name="legal authority" description=""/>
+    </actor-def>
+
+    <actor-IE-link-def>
+	<actorContIE actor="1002" ie="1"/>
+	<actorContIE actor="1002" ie="2"/>
+	<actorContIE actor="1002" ie="4"/><actorContIE actor="1002" ie="5"/><actorContIE actor="1002" ie="6"/><actorContIE actor="1002" ie="7"/><actorContIE actor="1002" ie="8"/><actorContIE actor="1002" ie="9"/><actorContIE actor="1002" ie="10"/><actorContIE actor="1002" ie="11"/><actorContIE actor="1002" ie="13"/><actorContIE actor="1002" ie="14"/><actorContIE actor="1004" ie="15"/>
+	<actorContIE actor="1002" ie="110"/><actorContIE actor="1002" ie="111"/><actorContIE actor="1002" ie="112"/><actorContIE actor="1004" ie="113"/>
+    </actor-IE-link-def>
+</grl-catalog>
